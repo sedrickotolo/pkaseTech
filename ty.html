@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Extracting Highlighted Radio Button</title>
+<script type=”text/javascript”>
+function fullName() {
+var form = document.forms[0];
+for (var i = 0; i < form.stooges.length; i++) {
+if (form.stooges[i].checked) {
+break;
+}
+}
+alert(“You chose “ + form.stooges[i].value + “.”);
+}
+</script>
+</head>
+<body>
+<form>
+<p>Select your favorite Stooge:
+<input type=”radio” name=”stooges” value=”Moe Howard” checked>Moe
+<input type=”radio” name=”stooges” value=”Curly Howard”>Curly<br>
+<input type=”radio” name=”stooges” value=”View Full Name...”
+<input type=”button” name=”Viewer” value=”Curly Howard”>Curly<br>
+onclick=”fullName()”></p>
+</form>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sedrick Form</title>
+	<link rel="stylesheet" href="css/formCss.css">
+	<script type="text/javascript">
+
+/*
+	function userNameFunction()
+	{
+		var user_Name = document.getElementById('user').value;
+		var emails = document.getElementById('emails').value;
+		var address = document.getElementById('address').value;
+		if(user_name == ""){
+			document.getElementById('user_name_error').innerHTML =" ** Username Can't be blanck";
+			return false;
+		}
+
+		if(pass == ""){
+			document.getElementById('passwords').innerHTML =" ** Please fill the password field";
+			return false;
+		}
+		if((pass.length <= 5) || (pass.length > 20)) {
+			document.getElementById('passwords').innerHTML =" ** Passwords lenght must be between  5 and 20";
+			return false;
+		}
+		if(pass!=confirmpass) || (confirmpass!=pass){
+			document.getElementById('confrmpass').innerHTML =" ** Password does not match the confirm password";
+			return false;
+		}
+		if(confirmpass == ""){
+			document.getElementById('confrmpass').innerHTML =" ** Please fill the confirmpassword field";
+			return false;
+		}
+
+		if(address == ""){
+			document.getElementById('address_error').innerHTML =" ** Please fill the address field";
+			return false;
+	}
+
+	}
+		function validation(){
+
+			var Name = document.getElementById('Name').value;
+			var pass = document.getElementById('pass').value;
+			var confirmpass = document.getElementById('conpass').value;
+			var mobileNumber = document.getElementById('mobileNumber').value;
+
+			if(Name == ""){
+				document.getElementById('name_error').innerHTML =" ** Please fill the username field";
+				return false;
+			}
+			if((Name.length <= 2) || (Name.length > 20)) {
+				document.getElementById('name_error').innerHTML =" ** Username lenght must be between 2 and 20";
+				return false;
+			}
+			if(!isNaN(Name)){
+				document.getElementById('name_error').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+			if(emails == ""){
+				document.getElementById('emailids').innerHTML =" ** Please fill the email idx` field";
+				return false;
+			}
+			if(emails.indexOf('@') <= 0 ){
+				document.getElementById('emailids').innerHTML =" ** @ Invalid Position";
+				return false;
+			}
+			//if (emails.indexOf('.')) {
+
+
+
+		/*	if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+				document.getElementById('emailids').innerHTML =" ** . Invalid Position";
+				return false;
+			}*/
+
+		/*
+			if(mobileNumber == ""){
+				document.getElementById('mobileno').innerHTML =" ** Please fill the mobile NUmber field";
+				return false;
+			}
+
+			if(isNaN(mobileNumber)){
+				document.getElementById('mobileno').innerHTML =" ** user must write digits only not characters";
+				return false;
+			}
+			if(mobileNumber.length!=10){
+				document.getElementById('mobileno').innerHTML =" ** Mobile Number must be 10 digits only";
+				return false;
+			}
+
+
+}
+*/
+function validation(){
+
+	var Name = document.getElementById('MyName').value;
+
+	if(Name == ""){
+	document.getElementById('name_error').innerHTML ="** Please fill the username field";
+	return false;
+}
+}
+/*
+function validate(){
+
+		var Name == document.getElementsByName('myName').value;
+
+		if (Name == " ") {
+			document.getElementById("_error").innerHTML = "Enter Name please ";
+			return false;
+		}
+		else {
+			if (Name !=="") {
+				document.getElementById("_error").innerHTML=" ";
+
+			}
+		}
+}
+	</script>
+
+
+</head>
+<body>
+<form action="#" onsubmit="return validation()" class="bg-light">
+						<label for="name" class="name"> Name: </label>
+						<input type="text" name="myName"id="MyName" autocomplete="on" autofocus maxlength="20">
+						<span id="_error"> </span>
+				</div>
+
+				<div class="form-group">
+							<label for="gender">Gender</label><br>
+              	<label id="male_label"> Male :
+													<input id="male" type="radio" name="male" value="Male" required="1">
+              	<label> Female :
+													<input id="female"type="radio" name="fmale" value="Female" > <br>
+
+              	<label for="DOB">Date Of Birth</label> &nbsp
+										<select name="month" class="month_select">
+
+											<option>Jan</option>
+													<option>Feb</option>
+													<option>Mar</option>
+													<option>Apri</option>
+													<option>May</option>
+													<option>Jun</option>
+													<option>Jul</option>
+													<option>Aug</option>
+													<option>Sept</option>
+													<option>Oct</option>
+													<option>Nov</option>
+													<option>Dec</option>
+										</select>
+
+										<select name="year" class="year_select">
+
+													<option>1990</option>
+													<option>1991</option>
+													<option>1992</option>
+													<option>1993</option>
+													<option>1994</option>
+													<option>1995</option>
+													<option>1996</option>
+													<option>1997</option>
+													<option>1998</option>
+													<option>2000</option>
+										</select>
+                  <input type="month" name="month" value="Month"><br>
+
+
+        <label for="country">Country : </label>
+                  <select name="country" class="country_select">
+											<option value="">Select </option>
+                      <option value="">Uganda </option>
+                      <option value=""> China</option>
+                      <option value=""> USA</option>
+                      <option value=""> Togo</option>
+                      <option value=""> South Africa</option>
+                      <option value=""> Nigera</option>
+                      <option value=""> Turkey</option>
+                      <option value=""> Afganistan</option>
+                      <option value=""> Kenya</option>
+                      <option value=""> Mexico</option>
+                      <option value=""> Peru</option>
+                      <option value=""> Australia</option>
+                      <option value=""> Netherland</option>
+                      <option value=""> Korea</option>
+                      <option value=""> South Sudan</option>
+										</select>
+                      <br>
+				</div>
+
+				<div class="form-group">
+					<label class="emailClass"> Email: </label>
+					<input type="text" name="email" class="form-control" id="emails" autocomplete="on" placeholder="Email ">
+					<span id="emailids"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="mobile_class"> Mobile Number: </label>
+					<input type="text" name="mobile" class="form-control" id="mobileNumber" autocomplete=".com" placeholder="Mobile Number">
+					<span id="mobileno_error"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="userName_class"> Username: </label>
+					<input type="text" name="user" class="form-control" id="user" autocomplete="on"placeholder="Enter Username">
+					<span id="user_name_error"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="passWord_class"> Password: </label>
+					<input type="text" name="pass" class="form-control" id="passWord" autocomplete="off" placeholder="Enter Password">
+					<span id="passwords"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="conPas"> Confirm Password: </label>
+					<input type="text" name="conpass" class="form-control" id="conpass" autocomplete="off" placeholder="Confirm Password">
+					<span id="confrmpass"</span>
+				</div>
+
+				<div class="form-group">
+					<label class="addressClass"> Address: </label>
+					<textarea name="address" rows="4" cols="50" placeholder="Enter your address"></textarea>
+					<span id="address_error"> </span>
+				</div>
+
+				<input type="checkbox" name="agree" value=""> <span class="accept">I accept the Terms and Conditions</span>
+				<br>
+
+				<input type="submit" name="submit" value="submit" class="btn btn-success" 	autocomplete="off">
+
+
+			</form><br><br>
+
+
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>
